@@ -187,5 +187,33 @@
         <p>Formación General Sarmiento - 2026</p>
     </footer>
 
+<script>
+  // Función para avisar a Google cuando alguien hace clic en WhatsApp
+  document.querySelectorAll('a[href*="wa.me"]').forEach(button => {
+    button.addEventListener('click', function() {
+      gtag('event', 'conversion', {
+          'send_to': 'AW-16828181815',
+          'event_label': 'Clic WhatsApp'
+      });
+    });
+  });
+
+  // Manejo del formulario final
+  document.getElementById('formFinal').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const nombre = this.querySelector('input[type="text"]').value;
+    const tel = this.querySelector('input[type="tel"]').value;
+    
+    // Avisa a Google de la conversión del formulario
+    gtag('event', 'conversion', {
+        'send_to': 'AW-16828181815',
+        'event_label': 'Formulario Enviado'
+    });
+
+    // Abre WhatsApp con los datos
+    const mensaje = `Hola, mi nombre es ${nombre}. Quisiera información sobre los cursos. Mi tel es ${tel}`;
+    window.open(`https://wa.me/541130438992?text=${encodeURIComponent(mensaje)}`, '_blank');
+  });
+</script>
 </body>
 </html>

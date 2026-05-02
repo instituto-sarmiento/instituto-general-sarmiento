@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+   <!-- 1. Google Tag (gtag.js) - Etiqueta Global -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16828181815"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'AW-16828181815');
+    </script>
+
+    <!-- 2. Fragmento de evento para conversión (Configurado para One Page) -->
+    <script>
+      function reporteConversion() {
+        gtag('event', 'conversion', {
+            'send_to': 'AW-16828181815/Bzr9CIz3iOsbELfaptg-',
+            'value': 1.0,
+            'currency': 'ARS'
+        });
+        return true;
+      }
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

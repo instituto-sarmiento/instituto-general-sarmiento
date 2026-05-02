@@ -68,7 +68,7 @@ input { width: 100%; padding: 15px; margin-bottom: 10px; border-radius: 4px; bor
 /* ESTO ARREGLA LAS FOTOS EN EL CELULAR */
 .mapa-img {
     width: 100%;       /* Ocupa todo el ancho disponible */
-    max-width: 400px;  /* Pero no se hace gigante en PC */
+    max-width: 100%;  /* Pero no se hace gigante en PC */
     height: auto;      /* Mantiene la proporción */
     display: block;    /* Evita espacios extraños */
     margin: 0 auto 15px;
